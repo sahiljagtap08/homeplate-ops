@@ -35,7 +35,8 @@ export default async function WeeklyPlanPage() {
           Scale recipes by servings to generate your shopping list.
         </p>
       </div>
-      <WeeklyPlanClient recipes={recipes || []} pastPlans={plans || []} />
+      {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+      <WeeklyPlanClient recipes={(recipes || []) as any} pastPlans={(plans || []) as any} />
     </div>
   )
 }
